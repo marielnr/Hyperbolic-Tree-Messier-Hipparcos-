@@ -7,81 +7,66 @@
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <meta name="dcterms.rightsHolder" content="Copyright © 2018 Glatzhofer Michael">
 
-        <link rel="stylesheet" href="d3-hypertree-light.css" id="ldswitch">
-        <script src="d3-hypertree.js"></script>
+        <link rel="stylesheet" href="d3-hypertree-light.css" id="ldswitch">        
+        <script src="d3-hypertree.js"></script>           
     </head>
     <body>
-        <script>
+        <script>    
             var ua = window.navigator.userAgent
             var msie = ua.indexOf("MSIE ")
 
             const emojimap = {
-                'Perseus':'🐙',
-                'Hercules':'💪🏿',
-                'Shield':'🛡️',
-                'Orion':'🦋',
-                'Hunter':'🗡️',
-                'Virgin':'🙌🏿',
-                'Lion':'🦁',
-                'Archer':'🏹',
-                'Triangle':'🔺',
-                'Serpent Holder':'🐍',
-                'Crab':'🦀',
-                'Hair of Berenice':'👩🏿‍',
-                'Unicorn':'🦄',
-                'Big Bear':'🐻',
-                'Andromeda':'✨',
-                'Bull':'🐂',
-                'Goat':'🐐',
-                'Cassiopeia':'🌬',
-                'Stern':'🪐',
-                'Poop deck':'💨',
-                'Arrow':'🏹',
-                'Hound Dogs':'🐕',
-                'Water Bearer':'🌊',
-                'Scorpion':'♏️',
-                'Charioteer':'☀️',
-                'Hydra':'💦',
-                'Sea Snake':'🐉',
-                'Hare':'☄️',
-                'Great Dog':'🐶',
-                'Little Fox':'🦊',
-                'Lyre':'💥',
-                'Crow':'⚡️',
-                'Winged Horse':'🐎',
-                'Fishes':'🐟',
-                'Twins':'💫',
-                'Sea-monster':'🐲',
-                'Swan':'🦢'
-            }
+                'Perseus':'🐙', 
+		'Hercules':'💪🏿', 
+		'Shield':'🛡️', 
+		'Orion':'🦋',
+		'Hunter':'🗡️',
+		'Virgin':'🙌🏿',
+		'Lion':'🦁',
+		'Archer':'🏹',
+		'Triangle':'🔺',
+		'Serpent Holder':'🐍',
+		'Crab':'🦀',
+      		'Hair of Berenice':'👩🏿‍',
+		'Unicorn':'🦄',
+		'Big Bear':'🐻',
+		'Andromeda':'✨',
+		'Bull':'🐂',
+       		'Goat':'🐐',
+		'Cassiopeia':'🌬',
+		'Stern':'🪐',
+		'Poop deck':'💨',
+		'Arrow':'🏹',
+		'Hound Dogs':'🐕',
+     		'Water Bearer':'🌊',
+		'Scorpion':'♏️',
+		'Charioteer':'☀️',
+		'Hydra':'💦',
+		'Sea Snake':'🐉',
+   		'Hare':'☄️', 
+		'Great Dog':'🐶',
+		'Little Fox':'🦊', 
+		'Lyre':'💥', 
+		'Crow':'⚡️', 
+		'Winged Horse':'🐎',
+       		'Fishes':'🐟', 
+		'Twins':'💫', 
+		'Sea-monster':'🐲', 
+		'Swan':'🦢'
+            }            
             const component = new hyt.Hypertree(
                 { parent: document.body },
                 {
-                    // 🚨 INYECCIÓN DEL PARCHE DE COMPATIBILIDAD 🚨
-                    dataloader: (callback) => {
-                        // 1. Llama al cargador original de archivos
-                        hyt.loaders.fromFile('hyperbolic_tree_data_simple.json')(function(data) {
-                            // 2. Si el dato NO es un array (es un objeto singular), lo envolvemos.
-                            if (typeof data === 'object' && !Array.isArray(data)) {
-                                console.log("PATCH APLICADO: Corrigiendo el formato de JSON a Array.");
-                                callback([data]); // Enviamos [ { ... } ]
-                            } else {
-                                // 3. Si ya es un array, o la librería lo acepta, lo pasamos.
-                                callback(data);
-                            }
-                        });
-                    },
-                    // FIN DEL PATCH
-                    
+                    dataloader: hyt.loaders.fromFile('hyperbolic_tree_data_simple.json'),
                     langloader: hyt.loaders.fromLangFile('labels.json'),
                     langInitBFS: (ht, n)=> {
-                        const id = n.data.name
+                        const id = n.data.name              
                         n.precalc.label = id
                         n.precalc.icon = emojimap[id]
                     },
                     filter: {
                         maxlabels: 12
-                    },
+                    },                    
                     geometry: {
                         captionFont: '12px Roboto',
                         captionHeight: .09
@@ -91,7 +76,7 @@
             component.initPromise
                 .then(()=> new Promise((ok, err)=> component.animateUp(ok, err)))
                 .then(()=> component.drawDetailFrame())
-        </script>
+        </script>        
         <style>
             @font-face {
                 font-family: 'Roboto';
@@ -103,24 +88,24 @@
                 font-family: 'NotoColorEmoji';
                 src: url('NotoColorEmoji.ttf') format('truetype');
             }
-            body {
+            body {    
                 margin: 0;
                 overflow: hidden;
                 font-family: 'Roboto';
                 font-weight: 300;
                 font-size: 1.8em;
             }
-            .unitdisk-nav svg {
-                left: 0;
+            .unitdisk-nav svg {                
+                left: 0;                 
                 width: 100%;
             }
             .unitdisk-nav svg .lazy.cell {
                 stroke: #dedede;
                 stroke-width: .001;
             }
-            .unitdisk-nav svg .focus-circle {
+            .unitdisk-nav svg .focus-circle {    
                 stroke: none;
-            }
+            }            
         </style>
     </body>
 </html>
