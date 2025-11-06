@@ -52,19 +52,6 @@
         "children": []
     },
     {
-        "name": "M45",
-        "numLeafs": 0,
-        "id": "M45",
-        "Constellation": null,
-        "ObjectType": "Open Cluster / Amas Ouvert",
-        "Magnitude": 1,
-        "Distance_ly": 410.0,
-        "ImageURL": "https://www.datastro.eu/api/explore/v2.1/catalog/datasets/catalogue-de-messier/files/3f56749618b208f4a29b63292151475e",
-        "RA": null,
-        "Dec": null,
-        "children": []
-    },
-    {
         "name": "M58 / Virgin",
         "numLeafs": 0,
         "id": "M58",
@@ -273,19 +260,6 @@
         "children": []
     },
     {
-        "name": "M102",
-        "numLeafs": 0,
-        "id": "M102",
-        "Constellation": null,
-        "ObjectType": "Galaxy / Galaxie",
-        "Magnitude": 10,
-        "Distance_ly": 23000000.0,
-        "ImageURL": "https://www.datastro.eu/api/explore/v2.1/catalog/datasets/catalogue-de-messier/files/be672217c1adf046a98269febe970de4",
-        "RA": null,
-        "Dec": null,
-        "children": []
-    },
-    {
         "name": "M50 / Unicorn",
         "numLeafs": 0,
         "id": "M50",
@@ -309,19 +283,6 @@
         "ImageURL": "https://www.datastro.eu/api/explore/v2.1/catalog/datasets/catalogue-de-messier/files/93c04111b9eea5f01925db31d67bb866",
         "RA": "12:21:54.90",
         "Dec": "+04:28:25.1",
-        "children": []
-    },
-    {
-        "name": "M40",
-        "numLeafs": 0,
-        "id": "M40",
-        "Constellation": null,
-        "ObjectType": "Double star / \u00c9toile Double",
-        "Magnitude": 9,
-        "Distance_ly": null,
-        "ImageURL": "https://www.datastro.eu/api/explore/v2.1/catalog/datasets/catalogue-de-messier/files/86cc361448cba451bb6dd75a43e55d23",
-        "RA": null,
-        "Dec": null,
         "children": []
     },
     {
@@ -890,7 +851,7 @@
         "Constellation": "Andromeda",
         "ObjectType": "Galaxy / Galaxie",
         "Magnitude": 8,
-        "Distance_ly": null,
+        "Distance_ly": 22500.0,
         "ImageURL": "https://www.datastro.eu/api/explore/v2.1/catalog/datasets/catalogue-de-messier/files/07dd9434047a7dedf82187c513b2eb3e",
         "RA": "00:42:41.83",
         "Dec": "+40:51:55.0",
@@ -955,7 +916,7 @@
         "Constellation": "Water Bearer",
         "ObjectType": "Open Cluster / Amas Ouvert",
         "Magnitude": 9,
-        "Distance_ly": null,
+        "Distance_ly": 4900.0,
         "ImageURL": "https://www.datastro.eu/api/explore/v2.1/catalog/datasets/catalogue-de-messier/files/416f765b2cb6fe7cd6389c342fb72f51",
         "RA": "20:58:55.97",
         "Dec": "-12:38:07.8",
@@ -1011,19 +972,6 @@
         "ImageURL": "https://www.datastro.eu/api/explore/v2.1/catalog/datasets/catalogue-de-messier/files/7038bdf46b99d2351020ebaab7450c88",
         "RA": "20:53:27.91",
         "Dec": "-12:32:13.4",
-        "children": []
-    },
-    {
-        "name": "M5",
-        "numLeafs": 0,
-        "id": "M5",
-        "Constellation": null,
-        "ObjectType": "Globular Cluster / Amas Globulaire",
-        "Magnitude": 5,
-        "Distance_ly": 24800.0,
-        "ImageURL": "https://www.datastro.eu/api/explore/v2.1/catalog/datasets/catalogue-de-messier/files/7370eb11bf12646584c5e5357cc2556b",
-        "RA": "15:18:33.75",
-        "Dec": "+02:04:57.7",
         "children": []
     },
     {
@@ -1102,19 +1050,6 @@
         "ImageURL": "https://www.datastro.eu/api/explore/v2.1/catalog/datasets/catalogue-de-messier/files/98ca6645bb15fb146eb24174c1385fe0",
         "RA": "12:39:59.43",
         "Dec": "-11:37:23.0",
-        "children": []
-    },
-    {
-        "name": "M16",
-        "numLeafs": 0,
-        "id": "M16",
-        "Constellation": null,
-        "ObjectType": "Emission Nebula / N\u00e9buleuse \u00e0 \u00e9mission",
-        "Magnitude": 6,
-        "Distance_ly": 5870.0,
-        "ImageURL": "https://www.datastro.eu/api/explore/v2.1/catalog/datasets/catalogue-de-messier/files/815eebcc7d91f614254397f70ef9f3ed",
-        "RA": "18:18:48.17",
-        "Dec": "-13:48:26.0",
         "children": []
     },
     {
